@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Кирилл Сиражеев](https://up.htmlacademy.ru/adaptive/17/user/4556).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Сигов] (https://htmlacademy.ru/profile/crazer).
 
 ---
 
