@@ -11,123 +11,121 @@
         <img class="page-header__logo-image" src="http://placehold.it/75x22" alt="Логотип Pink">
       </a>
       <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <button class="main-nav__close" type="button">Закрыть меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-                <li class="site-list__item site-list__item--active">
-                  <a href="index.html">Главная</a>
-                </li>
-                <li class="site-list__item site-list__item--active">
-                  <a href="photo.html">Фотографии</a>
-                </li>
-                <li class="site-list__item">
-                  <a href="form.html">Конкурс</a>
-                </li>
-                <li class="site-list__item">
-                  <a href="#">HTML Academy</a>
-                </li>
-              </ul>
-          </div>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a href="photo.html">Фотографии</a>
+          </li>
+          <li class="site-list__item">
+            <a href="form.html">Конкурс</a>
+          </li>
+          <li class="site-list__item">
+            <a href="#">HTML Academy</a>
+          </li>
+        </ul>
       </nav>
     </header>
 
     <main class="page-photo">
       <section class="banner-photo">
-        <img class="banner-photo__background" src="http://placehold.it/320x462">
+        <div class="banner-photo__background"></div>
         <h1 class="banner-photo__text">Фотографии пользователей</h1>
       </section>
-      <div class="photo-head">
-        <p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
-      </div>
+      <p class="photo-slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
 
       <section class="gallery">
 
-        <div class="gallery__feature">
-          <img class="gallery__feature-image" src="http://placehold.it/320x137">
-          <ul class="gallery__feature-info">
-            <li class="gallery__feature-author">Анна
-              <div class="gallery__feature-time">(5 минут назад)</div>
-            </li>
-            <li class="gallery__feature-text">Прыгать или нет? Напишите в коментарии свой совет и смотрите
-              прямую трансляцию в перископе, задавайте свои вопросы!</li>
-            <li class="gallery__feature-likes">Нравится: 215</li>
-          </ul>
-        </div>
+        <ul class="gallery__list">
 
-        <div class="gallery__item">
-          <img class="gallery__item-image" src="http://placehold.it/280x180">
-          <ul class="gallery__item-info">
-            <li class="gallery__item-author">Левон
-              <div class="gallery__item-time">(5 часов назад)</div>
-            </li>
-            <li class="gallery__item-text">Вчера он на луну летал, сегодня в руки к нам попал.</li>
-            <li class="gallery__item-likes">Нравится: 356</li>
-          </ul>
-        </div>
+          <li class="gallery__item gallery__panorama">
+            <div class="gallery__image">
+              <img src="http://placehold.it/280x180">
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__author">Анна<div class="gallery__text-time">(5 минут назад)</div></p>
+              <p class="gallery__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите
+                  прямую трансляцию в перископе, задавайте свои вопросы!</p>
+              <p class="gallery__likes">Нравится: 215</p>
+            </div>
+          </li>
 
-        <div class="gallery__item">
-          <img class="gallery__item-image" src="http://placehold.it/280x180">
-          <ul class="gallery__item-info">
-            <li class="gallery__item-author">Антон
-              <div class="gallery__item-time">(12 часов назад)</div>
-            </li>
-            <li class="gallery__item-text">Соседи будут рады!</li>
-            <li class="gallery__item-likes">Нравится: 666</li>
-          </ul>
-        </div>
+          <li class="gallery__item">
+            <div class="gallery__image">
+              <img src="http://placehold.it/280x180">
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__author">Левон<div class="gallery__text-time">(5 часов назад)</div></p>
+              <p class="gallery__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <p class="gallery__likes">Нравится: 365</p>
+            </div>
+          </li>
 
-        <div class="gallery__item">
-          <img class="gallery__item-image" src="http://placehold.it/280x180">
-          <ul class="gallery__item-info">
-            <li class="gallery__item-author">Борис
-              <div class="gallery__item-time">(20 часов назад)</div>
-            </li>
-            <li class="gallery__item-text">Здесь могла быть ваша цитата о высоком и вечном.</li>
-            <li class="gallery__item-likes">Нравится: 215</li>
-          </ul>
-        </div>
+          <li class="gallery__item">
+            <div class="gallery__image">
+              <img src="http://placehold.it/280x180">
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__author">Антон<div class="gallery__text-time">(20 часов назад)</div></p>
+              <p class="gallery__text">Соседи будут рады!</p>
+              <p class="gallery__likes">Нравится: 666</p>
+            </div>
+          </li>
 
-        <div class="gallery__item">
-          <img class="gallery__item-image" src="http://placehold.it/280x180">
-          <ul class="gallery__item-info">
-            <li class="gallery__item-author">Сергей
-              <div class="gallery__item-time">(25 часов назад)</div>
-            </li>
-            <li class="gallery__item-text">Самая кубанская в мире!</li>
-            <li class="gallery__item-likes">Нравится: 4</li>
-          </ul>
-        </div>
+          <li class="gallery__item">
+            <div class="gallery__image">
+              <img src="http://placehold.it/280x180">
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__author">Борис<div class="gallery__text-time">(20 часов назад)</div></p>
+              <p class="gallery__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <p class="gallery__likes">Нравится: 215</p>
+            </div>
+          </li>
 
-        <div class="gallery__item">
-          <img class="gallery__item-image" src="http://placehold.it/280x180">
-          <ul class="gallery__item-info">
-            <li class="gallery__item-author">Максим
-              <div class="gallery__item-time">(40 часов назад)</div>
-            </li>
-            <li class="gallery__item-text">Где снег-то?</li>
-            <li class="gallery__item-likes">Нравится: 150</li>
-          </ul>
-        </div>
+          <li class="gallery__item">
+            <div class="gallery__image">
+              <img src="http://placehold.it/280x180">
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__author">Сергей<div class="gallery__text-time">(25 часов назад)</div></p>
+              <p class="gallery__text">Самая кубанская в мире!</p>
+              <p class="gallery__likes">Нравится: 4</p>
+            </div>
+          </li>
 
-        <div class="gallery__item">
-          <img class="gallery__item-image" src="http://placehold.it/280x180">
-          <ul class="gallery__item-info">
-            <li class="gallery__item-author">Надежда
-              <div class="gallery__item-time">(45 часов назад)</div>
-            </li>
-            <li class="gallery__item-text">Всем GM и взаимные лайки!</li>
-            <li class="gallery__item-likes">Нравится: 2560</li>
-          </ul>
-        </div>
+          <li class="gallery__item">
+            <div class="gallery__image">
+              <img src="http://placehold.it/280x180">
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__author">Максим<div class="gallery__text-time">(40 часов назад)</div></p>
+              <p class="gallery__text">Где снег-то?</p>
+              <p class="gallery__likes">Нравится: 150</p>
+            </div>
+          </li>
 
+          <li class="gallery__item">
+            <div class="gallery__image">
+              <img src="http://placehold.it/280x180">
+            </div>
+            <div class="gallery__post">
+              <p class="gallery__author">Надежда<div class="gallery__text-time">(45 часов назад)</div></p>
+              <p class="gallery__text">Всем GM и взаимные лайки!</p>
+              <p class="gallery__likes">Нравится: 2560</p>
+            </div>
+          </li>
+
+        </ul>
       </section>
     </main>
 
     <footer class="page-footer">
-      <div class="page-footer__logo">
+      <a class="page-footer__logo">
         <img class="page-footer__logo-image" src="http://placehold.it/147x40">
-      </div>
+      </a>
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">

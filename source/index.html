@@ -11,42 +11,44 @@
         <img class="page-header__logo-image" src="http://placehold.it/75x22" alt="Логотип Pink">
       </a>
       <nav class="main-nav">
-          <button class="main-nav__toggle" type="button">Открыть меню</button>
-          <button class="main-nav__close" type="button">Закрыть меню</button>
-          <div class="main-nav__wrapper">
-            <ul class="main-nav__list site-list">
-                <li class="site-list__item site-list__item--active">
-                  <a href="index.html">Главная</a>
-                </li>
-                <li class="site-list__item">
-                  <a href="photo.html">Фотографии</a>
-                </li>
-                <li class="site-list__item">
-                  <a href="form.html">Конкурс</a>
-                </li>
-                <li class="site-list__item">
-                  <a href="#">HTML Academy</a>
-                </li>
-              </ul>
-          </div>
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a href="index.html">Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a href="#">HTML Academy</a>
+            </li>
+          </ul>
       </nav>
     </header>
 
     <main class="page-main">
       <section class="banner-main">
-        <div class="promo-screen">
-        <img class="promo-screen__background" src="http://placehold.it/320x462" alt="Фон промо-блока">
-        <img class="promo-screen__hand" src="http://placehold.it/498x314" alt="Рука с телефоном">
-        <img class="promo-screen__phone-screen" src="http://placehold.it/111x197" alt="Экран телефона">
+        <div class="promo-screen-wrapper">
+          <div class="promo-screen__background"></div>
+          <div class="promo-screen__hand"></div>
+          <div class="promo-screen__phone-screen"></div>
+        </div>
         <a href="#" class="download-button">Скачать приложение</a>
         <ul class="platfotm-list">
-          <li class="platfotm-list__item"><a href="#"><img src="http://placehold.it/47x56" alt="App store"></a></li>
-          <li class="platfotm-list__item"><a href="#"><img src="http://placehold.it/43x47" alt="Googl play"></a></li>
-          <li class="platfotm-list__item"><a href="#"><img src="http://placehold.it/44x41" alt="Microsoft store"></a></li>
+          <li class="platfotm-list__item"><a href="#"><img src="http://placehold.it/47x56" alt="App store">
+            <div class="visually-hidden">Приложение в App store</div></a>
+          </li>
+          <li class="platfotm-list__item"><a href="#"><img src="http://placehold.it/43x47" alt="Googl play">
+            <div class="visually-hidden">Приложение в Googl play</div></a>
+          </li>
+          <li class="platfotm-list__item"><a href="#"><img src="http://placehold.it/44x41" alt="Microsoft store">
+            <div class="visually-hidden">Приложение в Microsoft store"</div></a>
+          </li>
         </ul>
-        <div class="app-info">
-          <p class="app-info__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
-        </div>
+        <p class="app-info__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window</p>
       </section>
       <section class="app-feature">
         <div class="slogan">
@@ -56,36 +58,32 @@
         <div class="advantages">
           <ul class="advantages__list">
             <li class="advantages__item">
-              <p class="advantages__item-text">
-                <div class="advantages__item-head">
-                  Поднимает настроение
-                </div>
+              <p class="advantages__head">
+                Поднимает настроение
+              </p>
+              <p class="advantages__text">
                 Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
               </p>
             </li>
             <li class="advantages__item">
-              <p class="advantages__item-text">
-                <div class="advantages__item-head">
-                  Меняет мир вокруг
-                </div>
+              <p class="advantages__head">
+                Меняет мир вокруг
+              </p>
+              <p class="advantages__text">
                 Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
               </p>
             </li>
             <li class="advantages__item">
-              <p class="advantages__item-text">
-                <div class="advantages__item-head">
-                  Заводит новых друзей
-                </div>
+              <p class="advantages__head">
+                Заводит новых друзей
+              </p>
+              <p class="advantages__text">
                 Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
               </p>
             </li>
           </ul>
         </div>
-        <div class="app-screen">
-          <ul class="app-screen__item">
-            <li><img class="app-screen__image" src="http://placehold.it/157x320"></li>
-          </ul>
-        </div>
+        <div class="app-screen"></div>
       </section>
 
     </main>
