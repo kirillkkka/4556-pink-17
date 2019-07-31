@@ -4,4 +4,18 @@
 
 .page-header__wrapper {
   display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header__logo-image {
+    width: 150px;
+  }
 }
