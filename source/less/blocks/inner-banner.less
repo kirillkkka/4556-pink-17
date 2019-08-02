@@ -2,9 +2,65 @@
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
 }
 
-.inner-banner__text {
+.inner-banner__text-form {
   font-size: 24px;
   font-weight: 300;
   line-height: auto;
   color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 90px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.inner-banner__text-photo {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: auto;
+  color: #ffffff;
+  padding-top: 100px;
+  padding-bottom: 90px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .inner-banner {
+    width: 660px;
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
+  }
+
+  .inner-banner__text-photo {
+    width: 240px;
+  }
+
+  .inner-banner__text-form {
+    width: 240px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .inner-banner {
+    width: 100%;
+    background: url("../img/bg-back-desktop@1x.jpg") no-repeat;
+    background-size: cover;
+  }
+
+  .inner-banner__text-form {
+    width: 747px;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.23;
+    padding-top: 170px;
+    padding-bottom: 100px;
+  }
+
+  .inner-banner__text-photo {
+    width: 350px;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.23;
+    padding-top: 170px;
+    padding-bottom: 100px;
+  }
 }

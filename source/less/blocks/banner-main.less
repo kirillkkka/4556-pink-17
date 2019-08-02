@@ -4,3 +4,54 @@
     url("../img/bg-back-mobile@1x.jpg") no-repeat;
   background-color: #1d2631;
 }
+
+.banner-main__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 300px;
+}
+
+.banner-main__slogan {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .banner-main__wrapper {
+    margin-right: 340px;
+    padding-top: 100px;
+  }
+
+  .banner-main__slogan {
+    display: block;
+    width: 200px;
+    font-size: 40px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 40px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .banner-main__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 130px;
+    padding-top: 120px;
+    width: 300px;
+  }
+
+  .banner-main__slogan {
+    display: block;
+    width: 200px;
+    font-size: 40px;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 40px;
+    margin: 0 auto;
+  }
+}

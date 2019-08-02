@@ -13,24 +13,26 @@
   <div class="page">
 
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
-      </a>
-      <nav class="main-nav">
+      <div class="page-header__wrapper">
+        <a class="page-header__logo" href="index.html">
+          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" alt="Логотип Pink">
+        </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть или закрыть
             меню</span></button>
+      </div>
+      <nav class="main-nav">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item">
             <a class="site-list__link" href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">HTML Academy</a>
+            <a class="site-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -38,8 +40,8 @@
 
     <main class="page-photo">
       <section class="inner-banner">
-        <div class="inner-banner">
-          <h1 class="inner-banner__text">Фотографии пользователей</h1>
+        <div class="inner-banner__block">
+          <h1 class="inner-banner__text-photo">Фотографии пользователей</h1>
         </div>
       </section>
       <p class="inner-slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
@@ -49,11 +51,11 @@
 
         <ul class="gallery__list">
 
-          <li class="gallery__item gallery__panorama">
-            <div class="gallery__image">
-              <img src="img/panorama-mobile@1x.jpg">
+          <li class="gallery__panorama">
+            <div class="gallery__panorama-image">
+              <img class="gallery__image-pic" src="img/panorama-mobile@1x.jpg">
             </div>
-            <div class="gallery__post">
+            <div class="gallery__panorama-post">
               <p class="gallery__author">Анна<span class="gallery__text-time">(5 минут назад)</span></p>
               <p class="gallery__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите
                 прямую трансляцию в перископе, задавайте свои вопросы!</p>
@@ -63,7 +65,7 @@
 
           <li class="gallery__item">
             <div class="gallery__image">
-              <img src="img/photo-car-mobile@1x.jpg">
+              <img class="gallery__image-pic" src="img/photo-car-mobile@1x.jpg">
             </div>
             <div class="gallery__post">
               <p class="gallery__author">Левон<span class="gallery__text-time">(5 часов назад)</span></p>
@@ -74,7 +76,7 @@
 
           <li class="gallery__item">
             <div class="gallery__image">
-              <img src="img/photo-drumset-mobile@1x.jpg">
+              <img class="gallery__image-pic" src="img/photo-drumset-mobile@1x.jpg">
             </div>
             <div class="gallery__post">
               <p class="gallery__author">Антон<span class="gallery__text-time">(20 часов назад)</span></p>
@@ -85,7 +87,7 @@
 
           <li class="gallery__item">
             <div class="gallery__image">
-              <img src="img/photo-window-mobile@1x.jpg">
+              <img class="gallery__image-pic" src="img/photo-window-mobile@1x.jpg">
             </div>
             <div class="gallery__post">
               <p class="gallery__author">Борис<span class="gallery__text-time">(20 часов назад)</span></p>
@@ -96,7 +98,7 @@
 
           <li class="gallery__item">
             <div class="gallery__image">
-              <img src="img/photo-fair-mobile@1x.jpg">
+              <img class="gallery__image-pic" src="img/photo-fair-mobile@1x.jpg">
             </div>
             <div class="gallery__post">
               <p class="gallery__author">Сергей<span class="gallery__text-time">(25 часов назад)</span></p>
@@ -107,7 +109,7 @@
 
           <li class="gallery__item">
             <div class="gallery__image">
-              <img src="img/photo-pov-mobile@1x.jpg">
+              <img class="gallery__image-pic" src="img/photo-pov-mobile@1x.jpg">
             </div>
             <div class="gallery__post">
               <p class="gallery__author">Максим<span class="gallery__text-time">(40 часов назад)</span></p>
@@ -118,7 +120,7 @@
 
           <li class="gallery__item">
             <div class="gallery__image">
-              <img src="img/photo-wing-mobile@1x.jpg">
+              <img class="gallery__image-pic" src="img/photo-wing-mobile@1x.jpg">
             </div>
             <div class="gallery__post">
               <p class="gallery__author">Надежда<span class="gallery__text-time">(45 часов назад)</span></p>
@@ -138,19 +140,19 @@
       <div class="page-footer__social social">
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link" href="https://twitter.com" target="_blank">Twitter</a>
+            <a class="social__link" href="https://twitter.com" target="_blank"><span class="visually-hidden">Twitter</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a class="social__link" href="https://www.facebook.com" target="_blank"><span class="visually-hidden">Facebook</span></a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://www.youtube.com" target="_blank">YouTube</a>
+            <a class="social__link" href="https://www.youtube.com" target="_blank"><span class="visually-hidden">YouTube</span></a>
           </li>
         </ul>
       </div>
       <div class="page-footer__copyright copyright">
         <p class="page-footer__copyright-text">Разработано</p>
-        <a class="button page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="button page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span></a>
       </div>
     </footer>
 
