@@ -6,16 +6,40 @@
 
 .gallery__panorama {
   margin: 0 auto;
+  position: relative;
+  background-color: #f2f2f2;
 }
 
-.gallery-item:not(:first-child) {
-  padding: 50px 20px 0 20px;
+.gallery__panorama::before {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  padding: 6px 20px;
+  content: "панорама дня";
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #d22856;
+}
+
+.gallery__panorama-post {
+  margin: 0 20px 20px 20px;
+  width: 280px;
+}
+
+.gallery__panorama-pic {
+  width: 100%;
 }
 
 .gallery__post {
   background-color: #f2f2f2;
-  margin: -7px 20px;
-  padding: 20px 0;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 280px;
 }
 
 .gallery__author {
@@ -23,7 +47,8 @@
   font-weight: 700;
   line-height: 25px;
   color: #283645;
-  margin: 0 20px;
+  margin: 0 0 0 17px;
+  padding-top: 10px;
 }
 
 .gallery__text-time {
@@ -39,26 +64,32 @@
   font-weight: 400;
   line-height: 24px;
   color: #283645;
-  margin: 0 20px;
+  margin: 0 17px;
 }
 
 .gallery__likes {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 24px;
   color: #d22856;
-  margin: 0 20px;
-  padding-top: 15px;
+  margin: 0 40px;
+  padding: 10px 0 20px 0;
+  text-transform: uppercase;
+}
+
+.gallery__item {
+  width: 280px;
+  margin: 0 auto;
 }
 
 .gallery__image {
-  padding-top: 20px;
-  margin: 0;
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .gallery__image-pic {
-  width: 100%;
+  width: 280px;
 }
 
 @media (min-width: @tablet-width) {
