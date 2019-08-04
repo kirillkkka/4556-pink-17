@@ -1,13 +1,30 @@
 .platform-list {
-  width: 280px;
-  padding: 30px 0;
+  width: 225px;
+  padding: 40px 0 10px 0;
   margin: 0 auto;
   list-style: none;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .platform-list__item {
-  margin: 0;
-  padding-right: 35px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .platform-list {
+    padding: 50px 0 0 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .platform-list {
+    padding: 70px 0 0 0;
+  }
+
+  .platform-list__item {
+    margin: 0;
+    padding: 0 10px;
+  }
 }
