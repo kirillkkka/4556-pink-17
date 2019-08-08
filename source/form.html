@@ -68,28 +68,28 @@
 
         <fieldset class="form__fieldset form__fieldset--achievements">
           <legend class="form__fieldset-legend">Ваши безбашенные достижения в путешествии</legend>
-          <div class="form__fieldset--wrapper">
-            <label class="field-checkbox">
-              <input class="field-checkbox__input" type="checkbox" name="achievements" value="shark-shelfie" checked>
+          <div class="form__fieldset-wrapper">
+            <label class="field-checkbox field-checkbox--shark-selfie">
+              <input class="field-checkbox__input" type="checkbox" name="achievements" value="shark-selfie" checked>
               <span class="field-checkbox__label">Сделал селфи с акулой</span>
             </label>
-            <label class="field-checkbox">
+            <label class="field-checkbox field-checkbox--burn">
               <input class="field-checkbox__input" type="checkbox" name="achievements" value="burn" checked>
               <span class="field-checkbox__label">Обгорел на пляже</span>
             </label>
-            <label class="field-checkbox">
+            <label class="field-checkbox field-checkbox--chuck">
               <input class="field-checkbox__input" type="checkbox" name="achievements" value="сhuck">
               <span class="field-checkbox__label">Видел Чака Норриса</span>
             </label>
-            <label class="field-checkbox">
+            <label class="field-checkbox field-checkbox--shopping">
               <input class="field-checkbox__input" type="checkbox"  name="achievements" value="shopping">
               <span class="field-checkbox__label">Накупил сувениров</span>
             </label>
-            <label class="field-checkbox">
+            <label class="field-checkbox field-checkbox--tower">
               <input class="field-checkbox__input" type="checkbox" name="achievements" value="tower" checked>
               <span class="field-checkbox__label">Удержал башню</span>
             </label>
-            <label class="field-checkbox">
+            <label class="field-checkbox field-checkbox--rocknroll">
               <input class="field-checkbox__input" type="checkbox" name="achievements[]" value="rocknroll">
               <span class="field-checkbox__label">Разгромил отель</span>
             </label>
@@ -98,7 +98,7 @@
 
         <fieldset class="form__fieldset form__fieldset--contacts">
           <legend class="form__fieldset-legend form__fieldset-legend--nomobile">Контактная информация</legend>
-          <div class="form__fieldset--wrapper">
+          <div class="form__fieldset-wrapper">
             <label class="field-text field-text--contacts">
               <span class="field-text__label field-text--tel">Номер телефона</span>
               <input class="field-text__input field-text__input--order" type="tel"
@@ -131,12 +131,12 @@
 
         <fieldset class="form__fieldset form__fieldset--emotions">
           <legend class="form__fieldset-legend form__fieldset-legend--emotions">Опишите свои эмоции</legend>
-          <textarea class="field-text__input field-text__input--multi">Можно прям в красках, не стесняясь в выражениях</textarea>
+          <input class="field-text__input field-text__input--multi" type="textarea" placeholder="Можно прям в красках, не стесняясь в выражениях" name="text">
         </fieldset>
 
         <div class="form__button-wrapper">
           <button class="form__button" type="submit">Отправить форму</button>
-          <div class="form__legend"><span class="form__legend--color">*</span> — обязательные поля</div>
+          <div class="form__legend"><span class="form__legend-color">*</span> — обязательные <span class="form__legend-subtext">для заполнения</span> поля</div>
         </div>
       </form>
     </section>

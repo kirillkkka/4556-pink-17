@@ -9,15 +9,15 @@
   }
 }
 
-.field-checkbox__input {
-  display: none;
-}
-
 .field-checkbox__label {
   margin-left: 80px;
   font-size: 18px;
   line-height: 30px;
   color: #283645;
+}
+
+.field-checkbox__input {
+  display: none;
 }
 
 .field-checkbox__label::before {
@@ -32,6 +32,13 @@
   background-color: #ffffff;
 }
 
+.field-checkbox__input:checked + .field-checkbox__label::before {
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  background-size: 21px 16px;
+  background-position: center;
+}
+
 @media (min-width: @tablet-width) {
   .field-checkbox {
     position: relative;
@@ -42,5 +49,39 @@
 
   .field-checkbox__label {
     margin-left: 66px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-checkbox--shark-selfie {
+    order: 1;
+    margin-left: 50px;
+    margin-top: 3px;
+  }
+
+  .field-checkbox--chuck {
+    order: 2;
+    margin-top: 3px;
+  }
+
+  .field-checkbox--tower {
+    order: 3;
+    margin-right: 65px;
+    margin-top: 3px;
+  }
+
+  .field-checkbox--burn {
+    order: 4;
+    margin-left: 45px;
+    margin-right: 25px;
+  }
+
+  .field-checkbox--shopping {
+    order: 5;
+  }
+
+  .field-checkbox--rocknroll {
+    order: 6;
+    margin-right: 52px;
   }
 }
