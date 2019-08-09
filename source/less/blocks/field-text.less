@@ -23,7 +23,7 @@
 }
 
 .field-text__input--multi {
-  word-wrap: break-word;
+  resize: none;
   height: 170px;
 }
 
@@ -84,7 +84,6 @@
   }
 
   .field-text__input--multi {
-    resize: none;
     width: 77%;
     padding-left: 20px;
     padding-bottom: 10px;
@@ -108,11 +107,6 @@
     margin-top: 0;
   }
 
-  .field-text__input--order {
-    margin-left: 0;
-    margin-bottom: 0;
-  }
-
   .field-text--contacts {
     width: 375px;
     padding-left: 40px;
@@ -130,6 +124,10 @@
     right: 0;
   }
 
+  .field-text--contacts:nth-child(2)::after {
+    right: 45px;
+  }
+
   .field-text--tel {
     margin-top: 10px;
     margin-left: 23px;
@@ -143,16 +141,23 @@
     order: 2;
   }
 
-  .field-text__input--multi {
-    height: 100px;
-    width: 78%;
-    margin-left: 30px;
-  }
-
   .field-text__input {
     width: 70%;
     margin-left: 0;
     margin-right: 20px;
+  }
+
+  .field-text__input--multi {
+    height: 90px;
+    width: 85%;
+    margin: 15px auto;
+    display: block;
+  }
+
+  .field-text__input--order {
+    margin-left: 0;
+    margin-bottom: 0;
+    width: 90%;
   }
 
   .field-text--row {
