@@ -1,0 +1,66 @@
+.field-radio {
+  position: relative;
+  display: block;
+  margin-bottom: 45px;
+}
+
+.field-radio__input {
+  display: none;
+}
+
+.field-radio__label {
+  margin-left: 70px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+}
+
+.field-radio__label::before {
+  position: absolute;
+  top: -4px;
+  display: block;
+  width: 39px;
+  height: 39px;
+  content: "";
+  border: 2px solid #e5e5e5;
+  border-radius: 19.5px;
+  background-color: #ffffff;
+}
+
+.field-radio__label::before:active {
+  border-color: #d22856;
+}
+
+.field-radio__input:checked + .field-radio__label::before {
+  background-image: url("../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
+  background-size: 33px 33px;
+  background-position: center;
+}
+
+@media (min-width: @tablet-width) {
+  .field-radio {
+    position: relative;
+    display: block;
+    margin-bottom: 45px;
+  }
+
+  .field-radio__label {
+    margin-left: 63px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-radio {
+    position: relative;
+    display: block;
+    margin-bottom: 45px;
+    margin-left: 70px;
+    padding-left: 5px;
+    margin-top: 20px;
+  }
+
+  .field-radio__label {
+    margin-left: 65px;
+  }
+}

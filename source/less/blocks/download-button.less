@@ -4,8 +4,21 @@
   line-height: 18px;
   color: white;
   text-decoration: none;
-  padding: 15px 34px;
+  padding: 16px 34px;
   margin: 0 auto;
   border: 3px solid #ffffff;
   border-radius: 50px;
+}
+
+@media (min-width: @tablet-width) {
+  .download-button {
+    padding: 15px 45px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download-button {
+    font-size: 21px;
+    padding: 15px 30px;
+  }
 }

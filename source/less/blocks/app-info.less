@@ -6,5 +6,22 @@
   text-align: center;
   width: 280px;
   margin: 0 auto;
-  padding-bottom: 35px;
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .app-info {
+    width: 300px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    padding-top: 25px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .app-info {
+    padding-top: 45px;
+  }
 }

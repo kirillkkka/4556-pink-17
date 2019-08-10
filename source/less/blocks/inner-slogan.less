@@ -4,28 +4,43 @@
   line-height: 30px;
   color: #283645;
   text-align: center;
-  width: 240px;
+  width: 280px;
   margin: 0 auto;
-  padding-top: 55px;
-  padding-bottom: 20px;
+  padding-top: 45px;
+}
+
+.inner-slogan--nomobile {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
   .inner-slogan {
-    width: 420px;
+    width: 490px;
     font-size: 18px;
     line-height: 30px;
-    padding-top: 100px;
-    padding-bottom: 60px;
+    padding-top: 95px;
+    padding-bottom: 70px;
+  }
+
+  .inner-slogan--nomobile {
+    display: block;
+    width: 440px;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: @desktop-width) {
   .inner-slogan {
-    width: 570px;
+    width: 800px;
     font-size: 18px;
     line-height: 30px;
-    padding-top: 100px;
+    padding-top: 90px;
     padding-bottom: 75px;
+  }
+
+  .inner-slogan--nomobile {
+    display: inline;
   }
 }

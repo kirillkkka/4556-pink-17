@@ -2,25 +2,49 @@
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
 }
 
-.inner-banner__text {
+.inner-banner__text-form {
   font-size: 24px;
   font-weight: 300;
-  line-height: auto;
+  line-height: 1.23;
   color: #ffffff;
-  padding-top: 100px;
-  padding-bottom: 90px;
   margin: 0 auto;
   text-align: center;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  width: 230px;
+}
+
+.inner-banner__text-photo {
+  width: 180px;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.23;
+  color: #ffffff;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 80px;
 }
 
 @media (min-width: @tablet-width) {
   .inner-banner {
     width: 660px;
     background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
+    padding-bottom: 25px;
   }
 
-  .inner-banner__text {
-    width: 240px;
+  .inner-banner__text-photo {
+    width: 360px;
+    font-size: 50px;
+    line-height: 1.23;
+    padding-top: 70px;
+  }
+
+  .inner-banner__text-form {
+    width: 475px;
+    font-size: 50px;
+    line-height: 1.23;
+    padding-top: 70px;
   }
 }
 
@@ -28,9 +52,25 @@
   .inner-banner {
     width: 100%;
     background: url("../img/bg-back-desktop@1x.jpg") no-repeat;
+    background-size: cover;
+    padding-bottom: 0;
   }
 
-  .inner-banner__text {
-    width: 440px;
+  .inner-banner__text-form {
+    width: 747px;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.23;
+    padding-top: 170px;
+    padding-bottom: 100px;
+  }
+
+  .inner-banner__text-photo {
+    width: 590px;
+    font-size: 50px;
+    font-weight: 300;
+    line-height: 1.23;
+    padding-top: 170px;
+    padding-bottom: 100px;
   }
 }

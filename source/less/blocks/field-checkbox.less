@@ -1,0 +1,87 @@
+.field-checkbox {
+  position: relative;
+  display: block;
+  margin-bottom: 52px;
+  margin-left: 10px;
+
+  &:last-child {
+    margin-bottom: 47px;
+  }
+}
+
+.field-checkbox__label {
+  margin-left: 80px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+}
+
+.field-checkbox__input {
+  display: none;
+}
+
+.field-checkbox__label::before {
+  position: absolute;
+  top: -4px;
+  left: 10px;
+  display: block;
+  width: 35px;
+  height: 35px;
+  content: "";
+  border: 2px solid #e5e5e5;
+  background-color: #ffffff;
+}
+
+.field-checkbox__input:checked + .field-checkbox__label::before {
+  background-image: url("../img/icon-yes.svg");
+  background-repeat: no-repeat;
+  background-size: 21px 16px;
+  background-position: center;
+}
+
+@media (min-width: @tablet-width) {
+  .field-checkbox {
+    position: relative;
+    display: block;
+    margin-bottom: 52px;
+    margin-left: 50px;
+  }
+
+  .field-checkbox__label {
+    margin-left: 66px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .field-checkbox--shark-selfie {
+    order: 1;
+    margin-left: 50px;
+    margin-top: 3px;
+  }
+
+  .field-checkbox--chuck {
+    order: 2;
+    margin-top: 3px;
+  }
+
+  .field-checkbox--tower {
+    order: 3;
+    margin-right: 65px;
+    margin-top: 3px;
+  }
+
+  .field-checkbox--burn {
+    order: 4;
+    margin-left: 45px;
+    margin-right: 25px;
+  }
+
+  .field-checkbox--shopping {
+    order: 5;
+  }
+
+  .field-checkbox--rocknroll {
+    order: 6;
+    margin-right: 52px;
+  }
+}
