@@ -33,6 +33,7 @@
   margin: 0 20px 20px 20px;
   width: 280px;
   background-color: #f2f2f2;
+  min-height: 190px;
 }
 
 .gallery__panorama-pic {
@@ -44,6 +45,7 @@
   margin: 0 auto;
   margin-bottom: 20px;
   width: 280px;
+  min-height: 150px;
 }
 
 .gallery__author {
@@ -72,12 +74,12 @@
 }
 
 .gallery__likes {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   line-height: 24px;
   color: #d22856;
-  margin: 0 40px;
-  padding: 10px 0 20px 0;
+  margin: 0 0 0 20px;
+  padding: 0;
   text-transform: uppercase;
 }
 
@@ -93,6 +95,30 @@
 
 .gallery__image-pic {
   width: 280px;
+}
+
+.gallery__image--panorama {
+  display: flex;
+  justify-content: center;
+}
+
+.gallery__like-button {
+  width: 13px;
+  height: 12px;
+  border: none;
+  padding: 0;
+  overflow: hidden;
+  background: url("../img/icon-heart.svg") no-repeat top left;
+  background-size: 13px 12px;
+  outline: none;
+}
+
+.gallery__like-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 17px;
+  margin-bottom: 25px;
+  margin-top: 20px;
 }
 
 @media (min-width: @tablet-width) {
@@ -112,6 +138,7 @@
     width: 620px;
     margin: 0 auto;
     background-color: #f2f2f2;
+    min-height: 120px;
   }
 
   .gallery__panorama-image {
@@ -123,8 +150,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 100%;
-    margin: 0 auto;
+    width: 620px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   .gallery__post {
@@ -137,14 +165,20 @@
     width: 300px;
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: center;
   }
 
   .gallery__item {
-    padding-top: 50px;
+    padding-top: 5px;
     width: 300px;
-    margin: 0;
+    margin-right: 0;
+    margin-left: 0;
   }
 
+  .gallery__image-pic {
+    width: 300px;
+  }
 
   .gallery__likes {
     padding: 0;
@@ -152,6 +186,13 @@
 
   .gallery__author {
     margin-bottom: 10px;
+  }
+
+  .gallery__like-wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-right: 30px;
+    margin-left: 9px;
   }
 }
 
@@ -179,19 +220,13 @@
     background-color: #f2f2f2;
     margin: 0 auto;
     padding: 0;
-  }
-
-  .gallery__panorama-image {
-    width: 100%;
-    padding: 0;
-    margin: 0;
+    min-height: 95px;
   }
 
   .gallery__list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 960px;
-    margin: 0 auto;
+    width: 940px;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .gallery__post {
@@ -199,7 +234,6 @@
     margin: 0 auto;
     margin-right: 20px;
     padding: 0;
-    min-height: 150px;
   }
 
   .gallery__image {
@@ -214,5 +248,9 @@
 
   .gallery__author {
     margin-bottom: 10px;
+  }
+
+  .gallery__item {
+    padding-top: 25px;
   }
 }
