@@ -8,6 +8,13 @@
     bottom 272px center;
 }
 
+@media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+  background-image:
+    url("img/iphone-hand-mobile@2x.png"),
+    url("../img/bg-back-mobile@2x.jpg");
+}
+
+
 .banner-main__slogan {
   font-size: 24px;
   font-weight: 300;
@@ -45,6 +52,12 @@
       top -100px center;
   }
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image:
+      url("img/iphone-hand-tablet@2x.png"),
+      url("../img/bg-back-tablet@2x.jpg");
+  }
+
   .banner-main__slogan {
     display: block;
     width: 200px;
@@ -75,6 +88,12 @@
     background-position:
       right top 210px,
       top  center;
+  }
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image:
+      url("img/iphone-hand-desktop@2x.png"),
+      url("../img/bg-back-desktop@2x.jpg");
   }
 
   .banner-main__slogan {
