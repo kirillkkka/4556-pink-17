@@ -52,17 +52,17 @@
           <a href="#" class="download-button">Скачать приложение</a>
           <ul class="platform-list">
             <li class="platform-list__item"><a href="https://apps.apple.com" target="_blank"><img
-                  src="img/logo-apple.svg" width="47px" height="56px" alt="App Store">
+              class="platform-list__image" src="img/logo-apple.svg" width="47px" height="56px" alt="App Store">
                 <span class="visually-hidden">Приложение в App store</span>
               </a>
             </li>
             <li class="platform-list__item"><a href="https://play.google.com/store" target="_blank"><img
-                  src="img/logo-android.svg" width="43px" height="47px" alt="Googl play">
+              class="platform-list__image" src="img/logo-android.svg" width="43px" height="47px" alt="Googl play">
                 <span class="visually-hidden">Приложение в Googl play</span>
               </a>
             </li>
             <li class="platform-list__item"><a href="https://www.microsoft.com/ru-ru/store/b/home" target="_blank"><img
-                  src="img/logo-microsoft.svg" width="44px" height="41px" alt="Microsoft store">
+              class="platform-list__image" src="img/logo-microsoft.svg" width="44px" height="41px" alt="Microsoft store">
                 <span class="visually-hidden">Приложение в Microsoft store"</span>
               </a>
             </li>
@@ -72,8 +72,8 @@
       </section>
       <section class="app-feature">
         <div class="index-slogan">
-          <p class="index-slogan__text">Устали от серости мегаполиса?
-          <div class="index-slogan__subtitle">Нам есть, что вам предложить!</div></p>
+          <p class="index-slogan__text">Устали от серости мегаполиса?</p>
+          <div class="index-slogan__subtitle">Нам есть, что вам предложить!</div>
         </div>
         <div class="advantages">
           <div class="advantages__list-wrapper">
@@ -120,6 +120,117 @@
               <a class="research__link" href="#" target="_blank">Узнать больше об исследовании</a>
             </div>
           </div>
+        </section>
+
+        <section class="reviews">
+          <h2 class="visually-hidden">Отзывы о приложении</h2>
+          <div class="reviews__icon">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="78.672px" height="63.789px" viewBox="0 0 78.672 63.789" enable-background="new 0 0 78.672 63.789" xml:space="preserve">
+              <g>
+                <path d="M34.967,7.063L30.713,0C28.272,1.495,0,12.207,0,39.617c0,7.231,0.336,24.172,18.9,24.172 c11.187,0,13.94-10.279,13.94-13.584c0-21.977-21.382-14.177-21.382-14.177C11.458,17.957,31.263,9.184,34.967,7.063z"/>
+              </g>
+              <g>
+                <path d="M78.672,7.063L74.418,0c-2.44,1.495-30.713,12.207-30.713,39.617c0,7.231,0.337,24.172,18.9,24.172 c11.187,0,13.939-10.279,13.939-13.584c0-21.977-21.381-14.177-21.381-14.177C55.165,17.957,74.969,9.184,78.672,7.063z"/>
+              </g>
+            </svg>
+          </div>
+          <a href="#" class="reviews__arrow reviews__arrow--left">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.706px" height="41.719px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+              <path d="M2.045,20.859L21.458,1.446c0.331-0.331,0.331-0.867,0-1.198c-0.33-0.331-0.867-0.331-1.197,0L0.248,20.261 c-0.331,0.33-0.331,0.867,0,1.197l20.013,20.013c0.164,0.165,0.382,0.248,0.599,0.248s0.434-0.083,0.599-0.248 c0.331-0.331,0.331-0.867,0-1.198L2.045,20.859z"/>
+            </svg>
+          </a>
+          <a class="reviews__arrow reviews__arrow--right">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21.706px" height="41.719px" viewBox="0 0 21.706 41.719" enable-background="new 0 0 21.706 41.719" xml:space="preserve">
+              <path d="M19.661,20.859L0.248,1.446c-0.331-0.331-0.331-0.867,0-1.198c0.33-0.331,0.867-0.331,1.197,0l20.013,20.012 c0.33,0.33,0.33,0.867,0,1.197L1.445,41.471c-0.164,0.165-0.382,0.248-0.599,0.248s-0.434-0.083-0.599-0.248 c-0.331-0.331-0.331-0.867,0-1.198L19.661,20.859z"/>
+            </svg>
+          </a>
+          <div class="reviews__wrapper">
+            <div class="reviews__post">
+              <p class="reviews__info">
+                25 лет, водитель трамвая
+              </p>
+              <p class="reviews__name">
+                Николай Петров
+              </p>
+              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило
+                по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей
+                будущей женой в комментариях к выложенной фотографии!»
+              </p>
+            </div>
+            <div class="reviews__paginator">
+                <button class="reviews__page reviews__page--active" type="button"></button>
+                <button class="reviews__page" type="button"></button>
+                <button class="reviews__page" type="button"></button>
+            </div>
+          </div>
+        </section>
+        <section class="price">
+          <div class="price__wrapper">
+            <table class="price__list">
+              <tr>
+                <th class="price__plan"></th>
+                <th class="price__plan">
+                  <p class="price__name">База</p>
+                  <p class="price__amount">1,99 usd</p>
+                </th>
+                <th class="price__plan price__plan--hit">
+                  <p class="price__name">Стандарт</p>
+                  <p class="price__amount">3,99 usd</p>
+                </th>
+                <th class="price__plan">
+                  <p class="price__name">Анлим</p>
+                  <p class="price__amount">9,99 usd</p>
+                </th>
+              </tr>
+              <tr>
+                <td class="price__option price__option--blank">Розовый фильтр</td>
+                <td class="price__option price__option--check">Розовый фильтр</td>
+                <td class="price__option price__option--check">Розовый фильтр</td>
+                <td class="price__option price__option--check">Розовый фильтр</td>
+              </tr>
+              <tr>
+                <td class="price__option price__option--blank">Смайлики</td>
+                <td class="price__option price__option--no">Смайлики</td>
+                <td class="price__option price__option--check">Смайлики</td>
+                <td class="price__option price__option--check">Смайлики</td>
+              </tr>
+              <tr>
+                <td class="price__option price__option--blank">Комментарии</td>
+                <td class="price__option price__option--no">Комментарии</td>
+                <td class="price__option price__option--no">Комментарии</td>
+                <td class="price__option price__option--check">Комментарии</td>
+              </tr>
+            </table>
+          </div>
+          <div class="reviews__paginator price__paginator">
+              <button class="reviews__page reviews__page--active" type="button"></button>
+              <button class="reviews__page" type="button"></button>
+              <button class="reviews__page" type="button"></button>
+          </div>
+        </section>
+
+        <section class="contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+            <p class="contacts__slogan">Остались вопросы?Свяжитесь с нами!</p>
+            <div class="contacts__wrapper">
+            <ul class="contacts__post">
+              <li class="contacts__item">
+                <p class="contacts__item-text">Звоните:</p>
+                <a class="contacts__item-info" href="tel:+7(812)555-66-66">+7 (812) 555-66-66</a>
+              </li>
+              <li class="contacts__item">
+                <p class="contacts__item-text">Пишите:</p>
+                <a class="contacts__item-info" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              </li>
+              <li class="contacts__item">
+                <p class="contacts__item-text">Приезжайте в гости:</p>
+                <p class="contacts__item-info">ул. Большая Конюшенная, 19/8</p>
+              </li>
+            </ul>
+            </div>
+            <div class="contacts__map">
+                <iframe class="contacts__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533261!2d30.320858716093305!3d59.93871648187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1566038108342!5m2!1sru!2sru" width="320" height="200" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
         </section>
     </main>
 
