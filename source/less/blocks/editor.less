@@ -1,0 +1,186 @@
+.editor {
+  padding-top: 40px;
+}
+
+.editor__wrapper {
+  display: flex;
+  background-color: #f2f2f2;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.editor__form {
+  margin: 0 auto;
+}
+
+.editor__canvas {
+  display: block;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+.editor__tools-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-bottom: 30px;
+  padding-top: 20px;
+}
+
+.editor__button {
+  display: none;
+}
+
+.editor__tools-item {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-right: 30px;
+}
+
+.editor__range-track {
+  border: 1px solid #283645;
+}
+
+.editor__range-thumb {
+  position: absolute;
+  top: 0;
+  right: 35px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 2px solid #d22856;
+  border-radius: 50%;
+}
+
+.editor__range {
+  position: absolute;
+  left: 18px;
+  top: 95px;
+  width: 240px;
+  height: 14px;
+  padding-top: 5px;
+}
+
+.editor__tools-item svg {
+  fill: #b5b9be;
+}
+
+.editor__buttons {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  border-top: 1px solid #dddfe0;
+}
+
+.editor__button--post {
+  display: block;
+  width: 280px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  margin-bottom: 13px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  border: 3px solid #d22856;
+  border-radius: 27px;
+  background: none;
+  cursor: pointer;
+  color: #d22856;
+}
+
+.editor__button--cancel {
+  display: block;
+  width: 280px;
+  padding-top: 15px;
+  padding-bottom: 16px;
+  margin-bottom: 13px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+  border: 3px solid #d22856;
+  border-radius: 27px;
+  background: none;
+  cursor: pointer;
+  color: #d22856;
+}
+
+.editor__button--post:hover,
+.editor__button--cancel:hover {
+  background: #d22856;
+  color: #ffffff;
+}
+
+.editor__button--post:active,
+.editor__button--cancel:active {
+  background: #d22856;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .editor__canvas {
+    margin-right: 20px;
+  }
+
+  .editor__wrapper {
+    width: 660px;
+    display: flex;
+  }
+
+  .editor__form {
+    display: flex;
+    padding-top: 57px;
+    padding-bottom: 30px;
+    width: 660px;
+  }
+
+  .editor__tools {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+  }
+
+  .editor__tools-list {
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 300px;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  .editor__tools-item {
+    position: relative;
+    height: auto;
+    margin-right: 0;
+    padding-right: 18px;
+    border-bottom: 1px solid #dddfe0;
+  }
+
+  .editor__tools-item--crop {
+    height: 50px;
+    padding-top: 8px;
+    padding-bottom: 16px;
+  }
+
+  .editor__tools-item--fill {
+    height: 50px;
+    padding-top: 27px;
+    padding-bottom: 14px;
+  }
+
+  .editor__tools-item--contrast {
+    height: 50px;
+    padding-top: 25px;
+    padding-left: 5px;
+    padding-bottom: 20px;
+  }
+
+  .editor__buttons {
+    width: 300px;
+    margin-top: 350px;
+    padding: 0;
+  }
+}
