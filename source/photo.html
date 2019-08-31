@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link href="css/style.css" rel="stylesheet">
   <title>HTML Academy: Пинк</title>
 </head>
@@ -13,31 +16,35 @@
   <div class="page">
 
     <header class="page-header">
-      <div class="page-header__wrapper--desktop">
+      <div class="page-header__body">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
-          </picture>
+            <svg class="page-header__logo-desktop" width="146" height="40">
+                <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+              </svg>
+              <svg class="page-header__logo-tablet" width="146" height="40">
+                <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+              </svg>
+              <svg class="page-header__logo-mobile" width="74" height="22">
+                <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+              </svg>
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть или закрыть
             меню</span></button>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a class="site-list__link" href="photo.html">Фотографии</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -50,26 +57,31 @@
           <h1 class="inner-banner__text-photo">Фотографии пользователей</h1>
         </div>
       </section>
-      <p class="inner-slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
+      <p class="inner-slogan inner-slogan--photo">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
       </p>
 
       <section class="gallery">
-
+        <h2 class="visually-hidden">Фотогалерея</h2>
         <ul class="gallery__list">
 
           <li class="gallery__panorama">
-            <div class="gallery__image--panorama">
+            <a class="gallery__image gallery__image--panorama" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/panorama-desktop@1x.webp 1x, img/panorama-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/panorama-tablet@1x.webp 1x, img/panorama-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/panorama-mobile@1x.webp 1x, img/panorama-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
                 <img class="gallery__panorama-pic" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Панорама дня">
               </picture>
-            </div>
+            </a>
             <div class="gallery__panorama-post">
-              <p class="gallery__author">Анна<span class="gallery__text-time">(5 минут назад)</span></p>
-              <p class="gallery__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите
+              <div class="gallery__panorama-post--header">
+                <p class="gallery__author">Анна <span class="gallery__text-time">(5 минут назад)</span></p>
+              </div>
+                <p class="gallery__text">Прыгать или нет? Напишите в коментарии свой совет и смотрите
                 прямую трансляцию в перископе, задавайте свои вопросы!</p>
-              <div class="gallery__like-wrapper">
+              <div class="gallery__like-wrapper gallery__like-wrapper--panorama">
                 <img class="gallery__like-button" src="img/icon-heart.svg" width="13" height="12" alt="Лайк!">
                 <p class="gallery__likes">Нравится: 215</p>
               </div>
@@ -77,15 +89,18 @@
           </li>
 
           <li class="gallery__item">
-            <div class="gallery__image">
+            <a class="gallery__image" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.webp 1x, img/photo-car-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.webp 1x, img/photo-car-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-car-mobile@1x.webp 1x, img/photo-car-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
                 <img class="gallery__image-pic" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
-            </div>
+            </a>
             <div class="gallery__post">
-              <p class="gallery__author">Левон<span class="gallery__text-time">(5 часов назад)</span></p>
+              <p class="gallery__author">Левон <span class="gallery__text-time">(5 часов назад)</span></p>
               <p class="gallery__text">Вчера он на луну летал, сегодня в руки к нам попал.</p>
               <div class="gallery__like-wrapper">
                 <img class="gallery__like-button" src="img/icon-heart.svg" width="13" height="12" alt="Лайк!">
@@ -95,15 +110,18 @@
           </li>
 
           <li class="gallery__item">
-            <div class="gallery__image">
+            <a class="gallery__image" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.webp 1x, img/photo-drumset-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.webp 1x, img/photo-drumset-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-drumset-mobile@1x.webp 1x, img/photo-drumset-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
                 <img class="gallery__image-pic" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
-            </div>
+            </a>
             <div class="gallery__post">
-              <p class="gallery__author">Антон<span class="gallery__text-time">(20 часов назад)</span></p>
+              <p class="gallery__author">Антон <span class="gallery__text-time">(20 часов назад)</span></p>
               <p class="gallery__text">Соседи будут рады!</p>
               <div class="gallery__like-wrapper">
                 <img class="gallery__like-button" src="img/icon-heart.svg" width="13" height="12" alt="Лайк!">
@@ -113,15 +131,18 @@
           </li>
 
           <li class="gallery__item">
-            <div class="gallery__image">
+            <a class="gallery__image" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.webp 1x, img/photo-window-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.webp 1x, img/photo-window-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-window-mobile@1x.webp 1x, img/photo-window-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
                 <img class="gallery__image-pic" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
-            </div>
+            </a>
             <div class="gallery__post">
-              <p class="gallery__author">Борис<span class="gallery__text-time">(20 часов назад)</span></p>
+              <p class="gallery__author">Борис <span class="gallery__text-time">(20 часов назад)</span></p>
               <p class="gallery__text">Здесь могла быть ваша цитата о высоком и вечном.</p>
               <div class="gallery__like-wrapper">
                 <img class="gallery__like-button" src="img/icon-heart.svg" width="13" height="12" alt="Лайк!">
@@ -131,15 +152,18 @@
           </li>
 
           <li class="gallery__item">
-            <div class="gallery__image">
+            <a class="gallery__image" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.webp 1x, img/photo-fair-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.webp 1x, img/photo-fair-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-fair-mobile@1x.webp 1x, img/photo-fair-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
                 <img class="gallery__image-pic" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
-            </div>
+            </a>
             <div class="gallery__post">
-              <p class="gallery__author">Сергей<span class="gallery__text-time">(25 часов назад)</span></p>
+              <p class="gallery__author">Сергей <span class="gallery__text-time">(25 часов назад)</span></p>
               <p class="gallery__text">Самая кубанская в мире!</p>
               <div class="gallery__like-wrapper">
                 <img class="gallery__like-button" src="img/icon-heart.svg" width="13" height="12" alt="Лайк!">
@@ -149,15 +173,18 @@
           </li>
 
           <li class="gallery__item">
-            <div class="gallery__image">
+            <a class="gallery__image" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.webp 1x, img/photo-pov-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.webp 1x, img/photo-pov-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-pov-mobile@1x.webp 1x, img/photo-pov-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
                 <img class="gallery__image-pic" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
-            </div>
+            </a>
             <div class="gallery__post">
-              <p class="gallery__author">Максим<span class="gallery__text-time">(40 часов назад)</span></p>
+              <p class="gallery__author">Максим <span class="gallery__text-time">(40 часов назад)</span></p>
               <p class="gallery__text">Где снег-то?</p>
               <div class="gallery__like-wrapper">
                 <img class="gallery__like-button" src="img/icon-heart.svg" width="13" height="12" alt="Лайк!">
@@ -167,15 +194,18 @@
           </li>
 
           <li class="gallery__item">
-            <div class="gallery__image">
+            <a class="gallery__image" href="#">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.webp 1x, img/photo-wing-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.webp 1x, img/photo-wing-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-wing-mobile@1x.webp 1x, img/photo-wing-mobile@2x.webp 2x">
                 <source media="(min-width: 960px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
                 <img class="gallery__image-pic" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фотография пользователя">
               </picture>
-            </div>
+            </a>
             <div class="gallery__post">
-              <p class="gallery__author">Надежда<span class="gallery__text-time">(45 часов назад)</span></p>
+              <p class="gallery__author">Надежда <span class="gallery__text-time">(45 часов назад)</span></p>
               <p class="gallery__text">Всем GM и взаимные лайки!</p>
               <div class="gallery__like-wrapper">
                 <img class="gallery__like-button" src="img/icon-heart.svg" width="13" height="12" alt="Лайк!">
@@ -196,51 +226,55 @@
           <form class="editor__form" action="https://echo.htmlacademy.ru" method="post">
             <div class="editor__canvas">
               <picture>
+                <source type="image/webp" media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.webp 1x, img/photo-road-desktop@2x.webp 2x">
+                <source type="image/webp" media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.webp 1x, img/photo-road-tablet@2x.webp 2x">
+                <source type="image/webp" srcset="img/photo-road-mobile@1x.webp 1x, img/photo-road-mobile@2x.webp 2x">
+                <source media="(min-width: 960px)" srcset="img/photo-road-desktop@1x.jpg 1x, img/photo-road-desktop@2x.jpg 2x">
                 <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg 1x, img/photo-road-tablet@2x.jpg 2x">
                 <img class="editor__canvas-pic" src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Редактируемое фото">
               </picture>
             </div>
             <div class="editor__tools">
-              <input id="editor-crop" class="editor__button editor__button--crop" type="radio" name="tool" value="crop" checked>
-              <input id="editor-fill" class="editor__button editor__button--fill" type="radio" name="tool" value="fill">
-              <input id="editor-contrast" class="editor__button editor__button--contrast" type="radio" name="tool" value="contrast">
+              <input id="editor-crop" class="editor__button-input editor__button--crop" type="radio" name="tool" value="crop" checked>
+              <input id="editor-fill" class="editor__button-input editor__button--fill" type="radio" name="tool" value="fill">
+              <input id="editor-contrast" class="editor__button-input editor__button--contrast" type="radio" name="tool" value="contrast">
             </div>
             <ul class="editor__tools-list">
               <li class="editor__tools-item editor__tools-item--crop">
                 <label class="editor__tool" for="editor-crop">
-                  <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                  <svg class="editor__tool-img--crop" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
                     <path fill="none" d="M0,0h48v48H0V0z"/>
                     <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z"/>
                   </svg>
                 </label>
                 <div class="editor__range editor__range--crop">
-                    <div class="editor__range-track"></div>
-                    <div class="editor__range-thumb"></div>
+                    <div class="editor__range-track editor__range-track--crop"></div>
+                    <div class="editor__range-thumb editor__range-thumb--crop"></div>
                   </div>
               </li>
               <li class="editor__tools-item editor__tools-item--fill">
                   <label class="editor__tool" for="editor-fill">
-                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="48px" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
+                      <svg class="editor__tool-img--fill" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48" enable-background="new 0 0 48 48" xml:space="preserve">
                         <path fill="none" d="M0,0h48v48H0V0z"/>
                         <path d="M33.12,17.88L15.24,0l-2.83,2.83l4.76,4.76L6.88,17.88c-1.17,1.17-1.17,3.07,0,4.24l11,11C18.46,33.71,19.23,34,20,34 s1.54-0.29,2.12-0.88l11-11C34.29,20.95,34.29,19.05,33.12,17.88z M10.41,20L20,10.42L29.59,20H10.41z M38,23c0,0-4,4.33-4,7 c0,2.21,1.79,4,4,4s4-1.79,4-4C42,27.33,38,23,38,23z"/>
                         <rect y="40" width="48" height="3"/>
                       </svg>
                   </label>
                   <div class="editor__range editor__range--fill">
-                      <div class="editor__range-track"></div>
-                      <div class="editor__range-thumb"></div>
+                      <div class="editor__range-track editor__range-track--fill"></div>
+                      <div class="editor__range-thumb editor__range-thumb--fill"></div>
                     </div>
               </li>
               <li class="editor__tools-item editor__tools-item--contrast">
                   <label class="editor__tool" for="editor-contrast">
-                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31.92px" height="31.92px" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
+                      <svg class="editor__tool-img--contrast" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="31" height="31" viewBox="-35.422 -7.96 31.92 31.92" enable-background="new -35.422 -7.96 31.92 31.92" xml:space="preserve">
                         <path fill="#231F20" d="M-19.462-3.96c6.595,0,11.96,5.365,11.96,11.96s-5.365,11.96-11.96,11.96S-31.422,14.595-31.422,8 S-26.057-3.96-19.462-3.96 M-19.462-7.96c-8.814,0-15.96,7.145-15.96,15.96c0,8.813,7.146,15.96,15.96,15.96S-3.502,16.813-3.502,8 C-3.502-0.815-10.648-7.96-19.462-7.96L-19.462-7.96z"/>
                         <path d="M-19.462,16.331c4.706,0,8.52-3.813,8.52-8.52c0-4.705-3.813-8.519-8.52-8.519"/>
                       </svg>
                   </label>
                   <div class="editor__range editor__range--contrast">
-                      <div class="editor__range-track"></div>
-                      <div class="editor__range-thumb"></div>
+                      <div class="editor__range-track editor__range-track--contrast"></div>
+                      <div class="editor__range-thumb editor__range-thumb--contrast"></div>
                     </div>
               </li>
             </ul>
@@ -254,50 +288,51 @@
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Логотип Pink">
-        </picture>
-      </a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="https://twitter.com" target="_blank"><span class="visually-hidden">Twitter</span>
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-                <g id="W6EeEF_1_">
-                  <g>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://www.facebook.com" target="_blank"><span class="visually-hidden">Facebook</span>
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
-                <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://www.youtube.com" target="_blank"><span class="visually-hidden">YouTube</span>
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
-                <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <p class="page-footer__copyright-text">Разработано</p>
-        <a class="button page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span>
-          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09" enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-            <path d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z"/>
+        <a class="page-footer__logo" href="index.html">
+          <svg class="page-footer__logo-mobile" width="146.3" height="40.375">
+            <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+          </svg>
+          <svg class="page-footer__logo-desktop" width="146.3" height="40.375">
+            <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
           </svg>
         </a>
-      </div>
-    </footer>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="https://twitter.com" target="_blank"><span class="visually-hidden">Twitter</span>
+                <svg class="social__icon" width="17.5" height="14.663">
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.facebook.com" target="_blank"><span
+                  class="visually-hidden">Facebook</span>
+                  <svg class="social__icon" width="8.673" height="18.944">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.youtube.com" target="_blank"><span
+                  class="visually-hidden">YouTube</span>
+                  <svg class="social__icon" width="14.64" height="13.96">
+                    <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                  </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <p class="page-footer__copyright-text">Разработано</p>
+          <a class="button page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><span
+              class="visually-hidden">HTML Academy</span>
+              <svg width="26.943" height="34.09">
+                <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+              </svg>
+          </a>
+        </div>
+      </footer>
 
   </div>
 </body>

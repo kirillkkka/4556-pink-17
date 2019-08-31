@@ -8,48 +8,49 @@
   line-height: 18px;
   color: #283645;
   padding: 0;
-  margin: 0;
+  margin: 5px 0 0 0;
 }
 
 .page-footer__logo {
   display: flex;
   justify-content: center;
   padding-top: 40px;
-}
 
-.page-footer__logo:hover path,
-.page-footer__logo:focus path {
-  fill: #d22856;
-}
+  &:hover .page-footer__logo-mobile {
+    fill: #d22856;
+  }
 
-.page-footer__logo:active path {
-  opacity: 0.3;
+  &:active .page-footer__logo-mobile {
+    opacity: 0.3;
+  }
 }
 
 .page-footer__copyright-link {
   padding: 0;
-  margin: 0 20px 0 15px;
+  margin: 0 0 0 15px;
+  fill: #d22856;
 }
 
 .page-footer--no-mobile {
   display: none;
 }
 
-.page-footer__copyright-link path {
-  fill: #d22856;
-}
-
-.page-footer__copyright-link:hover path,
-.page-footer__copyright-link:focus path {
+.page-footer__copyright-link:hover,
+.page-footer__copyright-link:focus {
   fill: #283645;
 }
 
-.page-footer__copyright-link:active path {
+.page-footer__copyright-link:active {
   opacity: 0.3;
 }
 
 .page-footer__copyright {
-  margin: 3px 0 0 20px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.page-footer__logo-desktop {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -63,6 +64,7 @@
     width: 620px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -71,7 +73,7 @@
   }
 
   .page-footer__copyright {
-    margin-top: 35px;
+    margin: 50px 0 0 0;
   }
 
   .page-footer__logo {
@@ -83,19 +85,60 @@
     margin: 0;
     padding: 0;
   }
+
+  .page-footer__copyright-text {
+    margin-top: 5px;
+  }
+
+  .page-footer__copyright-link {
+    margin: 0 0 25px 15px;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
     width: 940px;
     padding-top: 20px;
+    justify-content: space-between;
   }
 
   .page-footer__copyright-text {
     font-size: 18px;
+    margin: 5px 0 0 0;
+  }
+
+  .page-footer__copyright {
+    margin: 30px 0 0 0;
+  }
+
+  .page-footer__copyright-link {
+    margin: 0 0 10px 15px;
   }
 
   .page-footer__social {
     margin: 0 auto;
+  }
+
+  .page-footer__logo-mobile {
+    display: none;
+  }
+
+  .page-footer__logo-desktop {
+    display: block;
+  }
+
+  .page-footer__logo {
+    display: flex;
+    justify-content: center;
+    padding-top: 0;
+    margin-top: 0;
+
+    &:hover .page-footer__logo-desktop {
+      fill: #d22856;
+    }
+
+    &:active .page-footer__logo-desktop {
+      opacity: 0.3;
+    }
   }
 }

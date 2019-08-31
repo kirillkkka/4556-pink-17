@@ -28,7 +28,7 @@
   padding-top: 20px;
 }
 
-.editor__button {
+.editor__button-input {
   display: none;
 }
 
@@ -46,12 +46,16 @@
 .editor__range-thumb {
   position: absolute;
   top: 0;
-  right: 35px;
+  left: 195px;
   width: 10px;
   height: 10px;
   background-color: #ffffff;
   border: 2px solid #d22856;
   border-radius: 50%;
+}
+
+.editor__range-thumb:active {
+  background-color: #d22856;
 }
 
 .editor__range {
@@ -65,6 +69,14 @@
 
 .editor__tools-item svg {
   fill: #b5b9be;
+}
+
+.editor__tools-item svg:hover {
+  fill: #8d949b;
+}
+
+.editor__tools-item svg:checked {
+  fill: #d22856;
 }
 
 .editor__buttons {
@@ -98,89 +110,262 @@
   font-size: 18px;
   font-weight: bold;
   line-height: 18px;
-  border: 3px solid #d22856;
+  border: 3px solid #dddfe0;
   border-radius: 27px;
   background: none;
   cursor: pointer;
-  color: #d22856;
+  color: #dddfe0;
 }
 
-.editor__button--post:hover,
-.editor__button--cancel:hover {
+.editor__button--post:hover {
   background: #d22856;
   color: #ffffff;
 }
 
-.editor__button--post:active,
-.editor__button--cancel:active {
+.editor__button--cancel:hover {
+  background: #f2f2f2;
+  color: #b5b9be;
+}
+
+.editor__button--post:active {
   background: #d22856;
   color: rgba(255, 255, 255, 0.3);
 }
 
+.editor__button--cancel:active {
+  background: #b5b9be;
+  color: #cbced2;
+}
+
 @media (min-width: @tablet-width) {
+  .editor {
+    padding-top: 70px;
+  }
+
   .editor__canvas {
-    margin-right: 20px;
+    margin-left: 20px;
+    padding-top: 15px;
   }
 
   .editor__wrapper {
     width: 660px;
     display: flex;
+    flex-wrap: wrap;
   }
 
   .editor__form {
+    position: relative;
     display: flex;
-    padding-top: 57px;
-    padding-bottom: 30px;
+    padding-top: 40px;
+    padding-bottom: 50px;
     width: 660px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .editor__tools {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 300px;
   }
 
   .editor__tools-list {
     flex-direction: column;
-    justify-content: flex-start;
+    display: flex;
+    align-items: flex-start;
     width: 300px;
+    height: 210px;
     padding-left: 0;
     padding-top: 0;
     padding-bottom: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
   .editor__tools-item {
-    position: relative;
-    height: auto;
-    margin-right: 0;
-    padding-right: 18px;
+    margin: 0;
+    padding: 0;
     border-bottom: 1px solid #dddfe0;
+    width: 270px;
+  }
+
+  .editor__tool-img--crop {
+    width: 22px;
+    height: 22px;
+  }
+
+  .editor__tool-img--fill {
+    width: 24px;
+    height: 22px;
+  }
+
+  .editor__tool-img--contrast {
+    width: 16px;
+    height: 16px;
   }
 
   .editor__tools-item--crop {
-    height: 50px;
-    padding-top: 8px;
-    padding-bottom: 16px;
+    margin: 0 0 0 8px;
+    padding: 12px 0 0 0;
   }
 
   .editor__tools-item--fill {
-    height: 50px;
-    padding-top: 27px;
-    padding-bottom: 14px;
+    margin: 0 0 0 8px;
+    padding: 25px 0 0 0;
   }
 
   .editor__tools-item--contrast {
-    height: 50px;
-    padding-top: 25px;
-    padding-left: 5px;
-    padding-bottom: 20px;
+    margin: 0 0 0 13px;
+    padding: 20px 0 0 0;
   }
 
   .editor__buttons {
-    width: 300px;
-    margin-top: 350px;
-    padding: 0;
+    position: absolute;
+    top: 263px;
+    left: 365px;
+    padding-top: 60px;
+    padding-bottom: 30px;
+    border-top: none;
+    display: block;
+  }
+
+  .editor__range {
+    position: absolute;
+    left: 63px;
+    top: 17px;
+    width: 200px;
+    height: 14px;
+    padding-top: 5px;
+  }
+
+  .editor__range--fill {
+    top: 90px;
+  }
+
+  .editor__range--contrast {
+    top: 160px;
+  }
+
+  .editor__button--post {
+    width: 260px;
+  }
+
+  .editor__button--cancel {
+    width: 260px;
+    margin-top: 20px;
+  }
+
+  .editor__range-thumb {
+    top: 0;
+    left: 0;
+  }
+
+  .editor__range-thumb--crop {
+    left: 145px;
+    top: 0;
+  }
+
+  .editor__range-thumb--fill {
+    left: 23px;
+    top: 0;
+  }
+
+  .editor__range-thumb--contrast {
+    left: 93px;
+    top: 0;
+  }
+
+  .editor__tools-item svg {
+    fill: #d22856;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .editor__wrapper {
+    width: 940px;
+    margin-bottom: 25px;
+  }
+
+  .editor__form {
+    width: 940px;
+    justify-content: flex-start;
+  }
+
+  .editor__buttons {
+    display: flex;
+    flex-direction: row;
+    top: 320px;
+    left: 475px;
+  }
+
+  .editor__button--post {
+    margin-top: 20px;
+    width: 180px;
+    margin-right: 40px;
+  }
+
+  .editor__button--cancel {
+    width: 180px;
+    margin-top: 20px;
+  }
+
+  .editor__canvas {
+    margin-left: 80px;
+    margin-right: 83px;
+  }
+
+  .editor__tools-list {
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    width: 410px;
+    margin-top: 0;
+  }
+
+  .editor__tool-img--crop {
+    width: 44px;
+    height: 44px;
+  }
+
+  .editor__tool-img--fill {
+    width: 48px;
+    height: 43px;
+  }
+
+  .editor__tool-img--contrast {
+    width: 32px;
+    height: 32px;
+  }
+
+  .editor__range {
+    position: absolute;
+    left: 100px;
+    top: 27px;
+    width: 290px;
+    height: 14px;
+    padding-top: 5px;
+  }
+
+  .editor__range--fill {
+    top: 100px;
+  }
+
+  .editor__range--contrast {
+    top: 170px;
+  }
+
+  .editor__range-thumb--crop {
+    left: 70px;
+    top: 0;
+  }
+
+  .editor__range-thumb--fill {
+    left: 245px;
+    top: 0;
+  }
+
+  .editor__range-thumb--contrast {
+    left: 160px;
+    top: 0;
   }
 }
