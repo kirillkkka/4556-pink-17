@@ -44,24 +44,26 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0;
-    width: auto;
+    width: 620px;
   }
 
   .site-list__item {
     text-transform: capitalize;
     font-size: 18px;
     font-weight: 400;
-    line-height: 18px;
+    line-height: 14px;
     text-align: center;
     box-shadow: none;
     background-color: inherit;
   }
 
+  .site-list__item--active {
+    border-bottom: solid 2px #ffffff;
+  }
+
   .site-list__link {
     border: none;
     width: auto;
-    margin: 0;
-    padding-left: 80px;
 
     &:hover {
       color: #d22856;

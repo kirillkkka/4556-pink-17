@@ -4,6 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
   <link href="css/style.css" rel="stylesheet">
   <title>HTML Academy: Пинк</title>
 </head>
@@ -13,31 +16,35 @@
   <div class="page">
 
     <header class="page-header">
-      <div class="page-header__wrapper--desktop">
+      <div class="page-header__body">
       <div class="page-header__wrapper">
         <a class="page-header__logo" href="index.html">
-          <picture>
-            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
-            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
-            <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="22" alt="Логотип Pink">
-          </picture>
+            <svg class="page-header__logo-desktop" width="146" height="40">
+                <use xlink:href="img/sprite.svg#logo-pink-white-desktop"></use>
+              </svg>
+              <svg class="page-header__logo-tablet" width="146" height="40">
+                <use xlink:href="img/sprite.svg#logo-pink-white-tablet"></use>
+              </svg>
+              <svg class="page-header__logo-mobile" width="74" height="22">
+                <use xlink:href="img/sprite.svg#logo-pink-white-mobile"></use>
+              </svg>
         </a>
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть или закрыть
             меню</span></button>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
+          <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__link" href="photo.html">Фотографии</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--active">
             <a class="site-list__link" href="form.html">Конкурс</a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="https://htmlacademy.ru/">HTML Academy</a>
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </li>
         </ul>
       </nav>
@@ -51,6 +58,7 @@
 
     <p class="inner-slogan">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="inner-slogan--nomobile">Пожалуйста, заполните форму ниже:</span></p>
     <section class="form">
+      <h2 class="visually-hidden">Конкурсная форма</h2>
       <form class="form__wrapper" name="page-form" action="https://echo.htmlacademy.ru" method="get">
         <fieldset class="form__fieldset form__fieldset--name">
           <label class="field-text field-text--row">
@@ -97,18 +105,18 @@
               <input class="field-checkbox__input" type="checkbox" name="achievements[]" value="rocknroll">
               <span class="field-checkbox__label">Разгромил отель</span>
             </label>
-            </div>
+          </div>
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--contacts">
           <legend class="form__fieldset-legend form__fieldset-legend--nomobile">Контактная информация</legend>
           <div class="form__fieldset-wrapper">
-            <label class="field-text field-text--contacts">
+            <label class="field-text field-text--contacts field-text__icon--tel">
               <span class="field-text__label field-text--tel">Номер телефона</span>
               <input class="field-text__input field-text__input--order" type="tel"
                 placeholder="Номер, пожалуйста" name="tel">
             </label>
-            <label class="field-text field-text--contacts">
+            <label class="field-text field-text--contacts field-text__icon--mail">
               <span class="field-text__label field-text--mail">Адрес почты</span>
               <input class="field-text__input field-text__input--order" type="email"
                 placeholder="Введите почту *" name="email"
@@ -143,69 +151,77 @@
           <div class="form__legend"><span class="form__legend-color">*</span> — обязательные <span class="form__legend-subtext">для заполнения</span> поля</div>
         </div>
       </form>
+
+      <div class="modal-window modal-window--success">
+          <div class="modal-window__info">
+            <p class="modal-window__header">Ваша заявка отправлена</p>
+            <p class="modal-window__text">Спасибо за ваше участие, ваша заявка
+              уже поступила к нам. В ближайшее время мы рассмотрим ее и
+              оповестим вас.</p>
+          </div>
+          <div class="modal-window__control">
+            <button class="modal-window__button" type="button">Закрыть окно</button>
+          </div>
+        </div>
+        <div class="modal-window modal-window--fail">
+          <div class="modal-window__info">
+            <p class="modal-window__header">Что-то пошло не так!</p>
+            <p class="modal-window__text">Проверьте поля, выделенные красным,
+              скорее всего вы забыли их заполнить</p>
+          </div>
+          <div class="modal-window__control">
+            <button class="modal-window__button" type="button">ок</button>
+          </div>
+        </div>
     </section>
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo" href="index.html">
-        <picture>
-          <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
-          <img class="page-footer__logo-image" src="img/logo-pink-blue-mobile.svg" alt="Логотип Pink">
-        </picture>
-      </a>
-      <div class="page-footer__social social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link" href="https://twitter.com" target="_blank"><span class="visually-hidden">Twitter</span>
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" width="17.5px" height="14.663px" viewBox="0 0 17.5 14.663"
-                enable-background="new 0 0 17.5 14.663" xml:space="preserve">
-                <g id="W6EeEF_1_">
-                  <g>
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                      d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z" />
-                  </g>
-                </g>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://www.facebook.com" target="_blank"><span
-                class="visually-hidden">Facebook</span>
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" width="8.673px" height="18.944px" viewBox="0 0 8.673 18.944"
-                enable-background="new 0 0 8.673 18.944" xml:space="preserve">
-                <path
-                  d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z" />
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link" href="https://www.youtube.com" target="_blank"><span
-                class="visually-hidden">YouTube</span>
-              <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                x="0px" y="0px" width="14.64px" height="13.96px" viewBox="0 0 14.64 13.96"
-                enable-background="new 0 0 14.64 13.96" xml:space="preserve">
-                <path
-                  d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__copyright copyright">
-        <p class="page-footer__copyright-text">Разработано</p>
-        <a class="button page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><span
-            class="visually-hidden">HTML Academy</span>
-          <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-            x="0px" y="0px" width="26.943px" height="34.09px" viewBox="0 0 26.943 34.09"
-            enable-background="new 0 0 26.943 34.09" xml:space="preserve">
-            <path
-              d="M13.62,0.017L13.472,0L0,1.412v24.661l13.472,8.017l13.43-7.99l0.042-0.026V1.412L13.62,0.017z M25.019,12.127L13.495,5.334 l-0.001-0.104L13.407,5.28l-0.088-0.056v0.109L1.925,12.118V3.147l11.547-1.212l11.547,1.212V12.127z M13.405,6.787L24.923,13.5 l-4.479,2.64l-7.093-4.221l-0.013,1.415l5.904,3.513l-0.86,0.507l-5.031-2.992l-0.013,1.415l3.827,2.275l-0.782,0.523l-3.032-1.787 l-0.013,1.413l1.852,1.091l-1.8,1.081L2.034,13.622L13.405,6.787z M1.925,15.127l11.411,6.791l0.015,1.044l-7.941-4.728L5.395,19.65 l7.979,4.796l0.017,1.076l-7.972-4.741l-0.013,1.415l8.021,4.821l0.045,0.026l8.143-4.872v-1.268l-0.011-0.148v-3.761l3.415-2.036 v10.02L13.472,31.85L1.925,24.979V15.127z" />
+        <a class="page-footer__logo" href="index.html">
+          <svg class="page-footer__logo-mobile" width="146.3" height="40.375">
+            <use xlink:href="img/sprite.svg#logo-pink-blue-mobile"></use>
+          </svg>
+          <svg class="page-footer__logo-desktop" width="146.3" height="40.375">
+            <use xlink:href="img/sprite.svg#logo-pink-blue-desktop"></use>
           </svg>
         </a>
-      </div>
-    </footer>
+        <div class="page-footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link" href="https://twitter.com" target="_blank"><span class="visually-hidden">Twitter</span>
+                <svg class="social__icon" width="17.5" height="14.663">
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.facebook.com" target="_blank"><span
+                  class="visually-hidden">Facebook</span>
+                  <svg class="social__icon" width="8.673" height="18.944">
+                    <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                  </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="https://www.youtube.com" target="_blank"><span
+                  class="visually-hidden">YouTube</span>
+                  <svg class="social__icon" width="14.64" height="13.96">
+                    <use xlink:href="img/sprite.svg#icon-youtube"></use>
+                  </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+          <p class="page-footer__copyright-text">Разработано</p>
+          <a class="button page-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive"><span
+              class="visually-hidden">HTML Academy</span>
+              <svg width="26.943" height="34.09">
+                <use xlink:href="img/sprite.svg#logo-htmlacademy"></use>
+              </svg>
+          </a>
+        </div>
+      </footer>
 
   </div>
 </body>

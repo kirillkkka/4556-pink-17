@@ -38,6 +38,14 @@
   border-radius: 0;
 }
 
+.field-text__input--multi:hover {
+  border-color: #283645;
+}
+
+.field-text__input--multi:active {
+  border-color: #d22856;
+}
+
 @media (min-width: @tablet-width) {
   .field-text {
     display: flex;
@@ -89,9 +97,19 @@
     order: 2;
   }
 
+  .field-text__icon--tel::after {
+    background-image: url("../img/icon-phone.svg");
+    background-size: 19.697px 19.696px;
+  }
+
   .field-text--mail {
     margin-left: 43px;
     order: 2;
+  }
+
+  .field-text__icon--mail::after {
+    background-image: url("../img/icon-mail.svg");
+    background-size: 17.988px 13.966px;
   }
 
   .field-text__input--multi {
@@ -105,7 +123,7 @@
   }
 
   .field-text__input--order {
-    width: 80%;
+    width: 71.5%;
     margin-left: 20px;
     margin-bottom: 15px;
   }
@@ -127,7 +145,7 @@
 
   .field-text--contacts:nth-child(2) {
     width: 375px;
-    padding-right: 40px;
+    padding-right: 45px;
     margin-left: 0;
   }
 
@@ -141,14 +159,14 @@
 
   .field-text--tel {
     margin-top: 10px;
-    margin-left: 23px;
+    margin-left: 20px;
     margin-right: 0;
     order: 2;
   }
 
   .field-text--mail {
     margin-top: 10px;
-    margin-left: 17px;
+    margin-left: 20px;
     order: 2;
   }
 
@@ -168,7 +186,7 @@
   .field-text__input--order {
     margin-left: 0;
     margin-bottom: 0;
-    width: 90%;
+    width: 77%;
   }
 
   .field-text--row {

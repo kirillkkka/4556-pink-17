@@ -11,7 +11,25 @@
 
 .page-header__logo {
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 20px;
+  fill: #ffffff;
+
+  &:hover .page-header__logo-mobile {
+    fill: #d22856;
+  }
+
+  &:active .page-header__logo-mobile {
+    opacity: 0.3;
+    fill: #ffffff;
+  }
+}
+
+.page-header__logo-tablet {
+  display: none;
+}
+
+.page-header__logo-desktop {
+  display: none;
 }
 
 @media (min-width: @tablet-width) {
@@ -21,16 +39,65 @@
     padding: 25px 20px 40px 20px;
   }
 
-  .page-header__logo-image {
-    width: 147px;
-    height: 40px;
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-tablet {
+    display: block;
+  }
+
+  .page-header__logo-desktop {
+    display: none;
+  }
+
+  .page-header__logo {
+    padding: 0;
+    margin: 0 0 0 20px;
+    fill: #ffffff;
+
+    &:hover .page-header__logo-tablet {
+      fill: #d22856;
+    }
+
+    &:active .page-header__logo-tablet {
+      opacity: 0.3;
+      fill: #ffffff;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page-header__wrapper--desktop {
+  .page-header__logo-tablet {
+    display: none;
+  }
+
+  .page-header__logo-mobile {
+    display: none;
+  }
+
+  .page-header__logo-desktop {
+    display: block;
+  }
+
+  .page-header__logo {
+    padding: 0;
+    margin: 0 0 0 20px;
+    fill: #ffffff;
+
+    &:hover .page-header__logo-desktop {
+      fill: #d22856;
+    }
+
+    &:active .page-header__logo-desktop {
+      opacity: 0.3;
+      fill: #ffffff;
+    }
+  }
+
+  .page-header__body {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     padding-top: 30px;
@@ -39,7 +106,7 @@
 
   .page-header__wrapper {
     justify-content: flex-start;
-    margin: 0;
+    margin-left: 130px;
     padding: 0;
   }
 

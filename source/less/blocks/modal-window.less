@@ -1,0 +1,147 @@
+.modal-window--success {
+  display: none;
+}
+
+.modal-window--fail {
+  display: none;
+}
+
+.modal-window {
+  position: absolute;
+  bottom: 50px;
+  width: 320px;
+  background-color: #ffffff;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.modal-window__info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 42px;
+  padding-bottom: 42px;
+  text-align: center;
+}
+
+.modal-window__header {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.modal-window__text {
+  margin: 0 auto;
+  color: #283645;
+  width: 265px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.modal-window__control {
+  padding: 50px 0 50px 0;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+}
+
+.modal-window__button {
+  width: 280px;
+  margin-left: 20px;
+  padding-top: 16px;
+  padding-bottom: 17px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #2aab6d;
+  border: none;
+}
+
+.modal-window__button:hover {
+  border-color: #1c9b5e;
+  background-color: #1c9b5e;
+}
+
+.modal-window__button:active {
+  color: rgba(255, 255, 255, 0.3);
+  border-color: #1c9b5e;
+  outline: none;
+}
+
+.modal-window__button:focus {
+  outline: none;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-window {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: 460px;
+  }
+
+  .modal-window__info {
+    padding: 42px 70px;
+    color: #283645;
+  }
+
+  .modal-window__header {
+    padding: 0 40px;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal-window__text {
+    font-size: 18px;
+    width: 310px;
+  }
+
+  .modal-window__control {
+    padding-bottom: 45px;
+  }
+
+  .modal-window__control--close {
+    padding-top: 48px;
+    padding-bottom: 50px;
+  }
+
+  .modal-window__button {
+    margin-left: 85px;
+    width: 300px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .modal-window {
+    width: 780px;
+  }
+
+  .modal-window__info {
+    padding: 42px 185px;
+    font-size: 18px;
+    color: #283645;
+  }
+
+  .modal-window__header {
+    padding: 0;
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .modal-window__text {
+    width: 380px;
+  }
+
+  .modal-window__control {
+    padding-top: 48px;
+    padding-bottom: 50px;
+    background-color: #f2f2f2;
+  }
+
+  .modal-window__button {
+    margin-left: 160px;
+    width: 460px;
+  }
+}
