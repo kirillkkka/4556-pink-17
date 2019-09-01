@@ -129,6 +129,17 @@
   margin-top: 10px;
 }
 
+.gallery__sub-slogan p {
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  color: #283645;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  width: 280px;
+}
+
 @media (min-width: @tablet-width) {
   .gallery {
     width: 660px;
@@ -146,7 +157,7 @@
     top: 62px;
   }
 
-  .gallery__panorama-post--header {
+  .gallery__panorama-header {
     order: -2;
     margin: 0;
     padding: 0;
@@ -221,6 +232,19 @@
     justify-content: space-between;
     width: 118px;
   }
+
+  .gallery__sub-slogan {
+    padding: 0;
+    margin-left: 10px;
+    width: 600px;
+  }
+
+  .gallery__sub-slogan p {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    width: 640px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -277,5 +301,9 @@
     padding-bottom: 37px;
     margin-left: 10px;
     margin-right: 10px;
+  }
+
+  .gallery__sub-slogan {
+    margin: 0 auto;
   }
 }

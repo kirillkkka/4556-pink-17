@@ -4,10 +4,12 @@
   line-height: 18px;
   color: white;
   text-decoration: none;
-  padding: 16px 34px;
+  padding: 16px 0 16px 0;
   margin: 0 auto;
   border: 3px solid #ffffff;
   border-radius: 50px;
+  width: 280px;
+  text-align: center;
 }
 
 .download-button:hover {
@@ -22,13 +24,14 @@
 
 @media (min-width: @tablet-width) {
   .download-button {
-    padding: 15px 45px;
+    width: 300px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 @media (min-width: @desktop-width) {
   .download-button {
     font-size: 21px;
-    padding: 15px 30px;
   }
 }
