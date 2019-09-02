@@ -2,6 +2,13 @@
   width: 320px;
   margin: 0 auto;
   padding: 0;
+  z-index: 3;
+  padding-bottom: 45px;
+}
+
+.contacts__background-paint {
+  padding-top: 45px;
+  background-color: #ffffff;
 }
 
 .contacts__post {
@@ -45,6 +52,7 @@
 .contacts__map {
   position: relative;
   padding-top: 20px;
+  background-color: none;
 }
 
 .contacts__map::after {
@@ -52,15 +60,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
   width: 100%;
   height: 50px;
   background: transparent url("../img/bg-triangle-white-footer.svg") no-repeat bottom center;
+  z-index: 3;
 }
 
 .contacts__frame {
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 200px;;
+  z-index: 2;
 }
 
 .contacts__item-info--email:hover {
@@ -70,6 +82,25 @@
 
 .contacts__item-info--email:active {
   color: #bec2c7;
+}
+
+.contacts__static-map {
+  position: relative;
+  width: 320px;
+  height: 200px;
+  transform: translateY(-780px);
+  z-index: -1;
+}
+
+.contacts__static-map::before {
+  content: "";
+  position: absolute;
+  top: 540px;
+  left: 140px;
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/icon-map-marker.svg");
+  background-repeat: no-repeat;
 }
 
 @media (min-width: @tablet-width) {
@@ -83,6 +114,7 @@
 
   .contacts {
     width: 660px;
+    padding-bottom: 0;
   }
 
   .contacts__slogan {
@@ -102,6 +134,7 @@
 
   .contacts__map {
     padding-top: 0;
+    height: 375px;
   }
 
   .contacts__map::after {
@@ -110,7 +143,29 @@
   }
 
   .contacts__frame {
-    height: 375px;
+    height: 380px;
+  }
+
+  .contacts__static-map {
+    width: 620px;
+    position: relative;
+    transform: translateY(-320px);
+    z-index: -1;
+  }
+
+  .contacts__static-map img {
+    width: 660px;
+  }
+
+  .contacts__static-map::before {
+    content: "";
+    position: absolute;
+    top: 500px;
+    left: 310px;
+    width: 36px;
+    height: 36px;
+    background-image: url("../img/icon-map-marker.svg");
+    background-repeat: no-repeat;
   }
 }
 
@@ -129,6 +184,7 @@
 
   .contacts {
     width: 100%;
+    padding-bottom: 120px;
   }
 
   .contacts__item {
@@ -153,6 +209,21 @@
   }
 
   .contacts__frame {
+    height: 520px;
+  }
+
+
+
+  .contacts__static-map {
+    width: 100%;
     height: 500px;
+    position: relative;
+    transform: translateY(-300px);
+    z-index: -1;
+  }
+
+  .contacts__static-map::before {
+    top: 540px;
+    left: 580px;
   }
 }

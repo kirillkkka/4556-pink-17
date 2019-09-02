@@ -75,7 +75,8 @@
   fill: #8d949b;
 }
 
-.editor__tools-item svg:checked {
+.editor__tools-item--active svg,
+.editor__tools-item--active svg:hover {
   fill: #d22856;
 }
 
@@ -140,6 +141,14 @@
 @media (min-width: @tablet-width) {
   .editor {
     padding-top: 70px;
+  }
+
+  .editor__tool svg {
+    fill: #d22856;
+  }
+
+  .editor__tools-item--active svg:hover {
+    fill: #8d949b;
   }
 
   .editor__canvas {
@@ -273,10 +282,6 @@
   .editor__range-thumb--contrast {
     left: 93px;
     top: 0;
-  }
-
-  .editor__tools-item svg {
-    fill: #d22856;
   }
 }
 
